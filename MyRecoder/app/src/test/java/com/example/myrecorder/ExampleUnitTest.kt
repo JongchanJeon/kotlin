@@ -1,4 +1,4 @@
-package com.example.myrecoder
+package com.example.myrecorder
 
 import org.junit.Test
 

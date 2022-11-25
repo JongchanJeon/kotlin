@@ -42,7 +42,7 @@
         app:layout_constraintStart_toStartOf="@+id/textViewElapsed"
         app:layout_constraintTop_toBottomOf="@+id/textViewElapsed" />
     <Button
-        android:id="@+id/buttonRecord"
+        android:id="@+id/buttonSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -50,4 +50,14 @@
         app:layout_constraintEnd_toEndOf="@+id/editTextFoodName"
         app:layout_constraintStart_toStartOf="@+id/editTextFoodName"
         app:layout_constraintTop_toBottomOf="@+id/editTextFoodName" />
+
+    <Button
+        android:id="@+id/buttonHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="172dp"
+        android:text="히스토리"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSave" />
 </androidx.constraintlayout.widget.ConstraintLayout>
