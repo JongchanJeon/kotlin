@@ -2,22 +2,33 @@ package com.example.myrecorder
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myrecorder.databinding.ActivityHistoryBinding
 import com.example.myrecorder.model.MyDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class HistoryActivity : AppCompatActivity() {
-    private val binding by lazy{
+    private val binding by lazy {
         ActivityHistoryBinding.inflate(layoutInflater)
     }
+    private val adapter = HistoryAdapter()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        CoroutineScope(Dispatchers.IO).launch{
+        val manager = LinearLayoutManager(this)
+        binding.recyclerView.layoutManager = manager
+        binding.recyclerView.adapter = adapter
+
+        CoroutineScope(Dispatchers.IO).launch {
             val dao = MyDatabase.getInstance(this@HistoryActivity).myDao()
+            val result = dao?.selectAll()!!
+            withContext(Dispatchers.Main) {
+                adapter.updateData(result)
+            }
         }
     }
 }
