@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.diary.model.MyRecord
 
 class HistoryAdapter: RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>() {
-    private lateinit var data:List<MyRecord>
+    private var data = listOf<MyRecord>()
 
     fun updateData(data:List<MyRecord>){
         this.data = data

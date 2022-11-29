@@ -14,17 +14,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
-        val moveWriteBtn = findViewById<Button>(R.id.writeBtn)
-
-        // 페이지 이동
-        fun moveToAnotherPage(){
-            val intent = Intent(this, WriteActivity::class.java)
-            startActivity(intent)
+        binding.writeBtn.setOnClickListener{
+            startActivity(Intent(this, WriteActivity::class.java))
         }
-        moveWriteBtn.setOnClickListener{
-            moveToAnotherPage()
-        }
+
         binding.listBtn.setOnClickListener{
             startActivity(Intent(this, HistoryActivity::class.java))
         }

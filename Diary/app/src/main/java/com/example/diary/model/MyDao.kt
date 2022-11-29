@@ -16,4 +16,6 @@ interface MyDao  {
 
     @Delete
     suspend fun delete(record: MyRecord)
+
+    @Select
 }

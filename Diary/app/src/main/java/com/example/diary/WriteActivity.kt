@@ -25,7 +25,8 @@ class WriteActivity : AppCompatActivity() {
         binding.saveBtn.setOnClickListener {
             val diary = binding.diarynote.text.toString()
             if(diary.isNotEmpty()) {
-                val time:String = LocalDateTime.now().toString()
+                val time:String = LocalDateTime.now().toString().substring(0, 10)
+
                 CoroutineScope(Dispatchers.IO).launch{
                     val db = MyDatabase.getInstance(this@WriteActivity)
                     db?.myDao()?.insert(MyRecord(0, diary, time))
