@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/ic_baseline_cruelty_free_24" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/write"
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_marginStart="64dp"
@@ -29,27 +29,27 @@
         app:srcCompat="@drawable/ic_baseline_border_color_24" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/update"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="@+id/write"
+        app:layout_constraintStart_toStartOf="@+id/write"
+        app:layout_constraintTop_toBottomOf="@+id/writeBtn"
         app:srcCompat="@drawable/ic_baseline_build_24" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/delete"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:layout_marginTop="45dp"
+        app:layout_constraintEnd_toEndOf="@+id/list"
+        app:layout_constraintStart_toStartOf="@+id/list"
+        app:layout_constraintTop_toBottomOf="@+id/listBtn"
         app:srcCompat="@drawable/ic_baseline_edit_off_24" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/list"
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_marginTop="120dp"
@@ -57,50 +57,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:srcCompat="@drawable/ic_baseline_format_list_numbered_24" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:text="일기장 작성"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:text="일기장 조회"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="일기장 수정"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="일기장 삭제"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
         android:id="@+id/textView5"
@@ -112,4 +68,44 @@
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/writeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="일기장 작성"
+        app:layout_constraintEnd_toEndOf="@+id/write"
+        app:layout_constraintStart_toStartOf="@+id/write"
+        app:layout_constraintTop_toBottomOf="@+id/write" />
+
+    <Button
+        android:id="@+id/listBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="일기장 조회"
+        app:layout_constraintEnd_toEndOf="@+id/list"
+        app:layout_constraintStart_toStartOf="@+id/list"
+        app:layout_constraintTop_toBottomOf="@+id/list" />
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="일기장 수정"
+        app:layout_constraintEnd_toEndOf="@+id/update"
+        app:layout_constraintStart_toStartOf="@+id/update"
+        app:layout_constraintTop_toBottomOf="@+id/update" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="일기장 삭제"
+        app:layout_constraintEnd_toEndOf="@+id/delete"
+        app:layout_constraintStart_toStartOf="@+id/delete"
+        app:layout_constraintTop_toBottomOf="@+id/delete" />
 </androidx.constraintlayout.widget.ConstraintLayout>
