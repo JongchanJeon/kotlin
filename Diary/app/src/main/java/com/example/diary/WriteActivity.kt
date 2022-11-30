@@ -27,13 +27,13 @@ class WriteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        binding.saveBtn.setOnClickListener {
-            CoroutineScope(Dispatchers.IO).launch {
-                val dao = MyDatabase.getInstance(this@WriteActivity)?.myDao()
-
-                result = dao?.checkdate()!!.toString()
-
-            }
+//        binding.saveBtn.setOnClickListener {
+//            CoroutineScope(Dispatchers.IO).launch {
+//                val dao = MyDatabase.getInstance(this@WriteActivity)?.myDao()
+//
+//                result = dao?.checkdate()!!.toString()
+//
+//            }
             if (result == "0"){
                 val diary = binding.diarynote.text.toString()
                 if(diary.isNotEmpty()) {
