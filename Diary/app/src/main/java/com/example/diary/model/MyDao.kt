@@ -12,6 +12,7 @@ interface MyDao  {
     @Query("select * from MyRecord order by time desc")
     fun selectAll():List<MyRecord>
 
+
     @Insert(onConflict = IGNORE)
     suspend fun insert(record: MyRecord)
 

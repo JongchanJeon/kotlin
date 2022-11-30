@@ -21,5 +21,9 @@ class MainActivity : AppCompatActivity() {
         binding.listBtn.setOnClickListener{
             startActivity(Intent(this, HistoryActivity::class.java))
         }
+
+        binding.deleteBtn.setOnClickListener{
+            startActivity(Intent(this, deleteActivity::class.java))
+        }
     }
 }
