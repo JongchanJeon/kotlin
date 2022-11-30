@@ -9,11 +9,8 @@ import androidx.room.Query
 
 @Dao
 interface MyDao  {
-    @Query("select * from MyRecord order by rid desc")
+    @Query("select * from MyRecord order by time desc")
     fun selectAll():List<MyRecord>
-
-//    @Query("select count(*) from  MyRecord where time = time")
-//    fun checkdate():List<MyRecord>
 
     @Insert(onConflict = IGNORE)
     suspend fun insert(record: MyRecord)

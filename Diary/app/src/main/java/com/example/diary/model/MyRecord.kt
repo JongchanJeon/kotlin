@@ -6,7 +6,6 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class MyRecord(
-    @PrimaryKey(autoGenerate = true) val rid:Int,
     @ColumnInfo val diary:String,
-    @ColumnInfo val time:String
+    @PrimaryKey val time:String
 )
