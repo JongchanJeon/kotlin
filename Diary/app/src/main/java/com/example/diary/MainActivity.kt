@@ -25,5 +25,9 @@ class MainActivity : AppCompatActivity() {
         binding.deleteBtn.setOnClickListener{
             startActivity(Intent(this, deleteActivity::class.java))
         }
+
+        binding.updateBtn.setOnClickListener{
+            startActivity(Intent(this, UpdateActivity::class.java))
+        }
     }
 }

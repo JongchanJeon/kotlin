@@ -32,7 +32,7 @@ class WriteActivity : AppCompatActivity() {
         // 달력 객체 생성
         val calendarView: CalendarView = findViewById(R.id.calendarView)
 
-        val dateFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd")
+        val dateFormat: DateFormat = SimpleDateFormat("yyyy-MM-d")
 
         val date:Date = Date(calendarView.date)
 

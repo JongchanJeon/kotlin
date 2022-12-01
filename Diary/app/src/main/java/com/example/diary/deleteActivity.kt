@@ -25,7 +25,7 @@ class deleteActivity : AppCompatActivity() {
         // 달력 객체 생성
         val calendarView: CalendarView = findViewById(R.id.calendarView)
         val dayText: TextView = findViewById(R.id.daytext)
-        val dateFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd")
+        val dateFormat: DateFormat = SimpleDateFormat("yyyy-MM-d")
 
         val date: Date = Date(calendarView.date)
         dayText.text = dateFormat.format(date)
