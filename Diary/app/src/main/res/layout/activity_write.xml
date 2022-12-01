@@ -20,19 +20,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="164dp"
-        android:layout_marginTop="568dp"
+        android:layout_marginTop="540dp"
         android:text="저장하기"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="91dp"
-        android:layout_height="17dp"
+        android:layout_width="171dp"
+        android:layout_height="35dp"
         android:layout_marginStart="132dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="132dp"
         android:text="오늘의 일기는?"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +44,7 @@
         android:layout_width="257dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="74dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginTop="336dp"
         android:layout_marginEnd="80dp"
         android:ems="10"
         android:hint="일기 내용을 입력하세요."
@@ -55,8 +56,8 @@
         android:scrollbars="vertical"
         android:scrollHorizontally="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
