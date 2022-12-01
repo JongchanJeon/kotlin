@@ -10,7 +10,7 @@ interface MyDao  {
     fun selectAll():List<MyRecord>
 
     @Query("select diary from MyRecord where time = :time")
-    fun selectTime(time:String):String
+    fun selectTime(time: String):String
 
     @Update
     suspend fun update(record: MyRecord)
